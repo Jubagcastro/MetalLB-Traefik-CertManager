@@ -257,3 +257,4 @@ Aplique o manifesto
 $ kubectl apply -f jenkins.yaml
 ```
 Agora precisamos apenas seguir estes passos para os próximos serviços que iremos subir, na raiz desse git temos um [sample-nginx](https://github.com/Jubagcastro/MetalLB-Traefik-CertManager/tree/master/sample-nginx) que possui os manifestos necessários para usufruir do certificado gerado pelo CertManager, a rota de ingresso provida pelo Traefik, e o balanceamento de carga provida pelo MetalLB.
+# Make some Coffee

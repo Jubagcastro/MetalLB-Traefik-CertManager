@@ -9,7 +9,7 @@ $ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/mani
 ```bash
 $ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/manifests/metallb.yaml
 ```
-# Crie uma secret usando OpenSSL (caso não tenha, instale openssl) no namespace metallb-system criado no primeiro passo
+# Crie uma secret usando OpenSSL no namespace metallb-system criado no primeiro passo
 ```bash
 $ kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
 ```
@@ -31,3 +31,4 @@ data:
       addresses:
       - 10.1.1.201-10.1.1.220        
 ```
+# Make some Coffee
