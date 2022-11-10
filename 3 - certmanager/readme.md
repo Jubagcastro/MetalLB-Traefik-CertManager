@@ -77,7 +77,7 @@ spec:
 # Crie um certificado em staging para validar as configurações até agora
 .\certificates\cert-staging.yaml
  ```yaml
- apiVersion: cert-manager.io/v1
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: home-juba 
@@ -146,7 +146,7 @@ spec:
  # Crie seus certificado em production
 .\certificates\cert-production.yaml
  ```yaml
- apiVersion: cert-manager.io/v1
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: home-juba
@@ -190,7 +190,7 @@ spec:
 
  .\certificates\cert-automation.yaml
  ```yaml
- apiVersion: cert-manager.io/v1
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: home-juba
