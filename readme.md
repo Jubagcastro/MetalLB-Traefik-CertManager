@@ -15,3 +15,8 @@
 # [3 - Cert-Manager](https://github.com/Jubagcastro/MetalLB-Traefik-CertManager/tree/master/3%20-%20certmanager) 
 ## https://cert-manager.io/docs/
 # 4 Make Coffee & Celebrate
+
+# Diagrama de referência
+<p align="center">
+ <img src="./MetalLB-Traefik-CertManager.drawio.svg">
+ </p>
