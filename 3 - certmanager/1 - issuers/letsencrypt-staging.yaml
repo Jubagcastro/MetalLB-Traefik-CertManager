@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-staging
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: juba@jubagcastro.dev #Seu email para registro no letsEncrypt (pode ser o mesmo da cloudflare)
+    privateKeySecretRef:
+      name: letsencrypt-staging
+    solvers:
+      - dns01:
+          cloudflare:
+            email: juba@jubagcastro.dev #Seu email de login na Cloudflare
+            apiTokenSecretRef: #Referência da secret criada anteriormente
+              name: cloudflare-token-secret
+              key: cloudflare-token
+        selector:
+          dnsZones:
+            - "jubagcastro.dev" #Seu Domínio

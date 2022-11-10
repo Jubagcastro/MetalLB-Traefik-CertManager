@@ -1,0 +1,27 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: home-juba
+  namespace: default
+spec:
+  secretName: home-juba #Nome que será usado como referência tls nos IngressRoutes
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "*.home.jubagcastro.dev" #CommonName igual ao DNS
+  dnsNames:
+  - "*.home.jubagcastro.dev" #DNS para o certificado, neste caso um wildcard para o subdomínio home.jubagcastro.dev
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: home-juba
+  namespace: traefik
+spec:
+  secretName: home-juba #Nome que será usado como referência tls nos IngressRoutes
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "*.home.jubagcastro.dev" #CommonName igual ao DNS
+  dnsNames:
+  - "*.home.jubagcastro.dev" #DNS para o certificado, neste caso um wildcard para o subdomínio home.jubagcastro.dev

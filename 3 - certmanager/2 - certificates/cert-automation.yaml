@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: home-juba
+  namespace: automation
+spec:
+  secretName: home-juba
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "*.home.jubagcastro.dev"
+  dnsNames:
+  - "home.jubagcastro.dev"
+  - "*.home.jubagcastro.dev"

@@ -1,0 +1,43 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins
+  namespace: automation
+spec:
+  selector:
+    app.kubernetes.io/component: jenkins-master
+    app.kubernetes.io/instance: jenkins
+  ports:
+  - name: http
+    targetPort: 8080
+    port: 8080
+  - name: jnlp
+    targetPort: 50000
+    port: 50000 
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: jenkins
+  namespace: automation
+  annotations: 
+    kubernetes.io/ingress.class: traefik
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`www.jenkins.home.jubagcastro.dev`)
+      kind: Rule
+      services:
+        - name: jenkins
+          port: 8080
+    - match: Host(`jenkins.home.jubagcastro.dev`)
+      kind: Rule
+      services:
+        - name: jenkins
+          port: 8080
+      middlewares:
+        - name: default-headers
+  tls:
+    secretName: home-juba
