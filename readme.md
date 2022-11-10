@@ -11,5 +11,4 @@
 # [1 - Metal-LB](https://github.com/Jubagcastro/MetalLB-Traefik-CertManager/tree/master/1%20-metal-lb)
 # [2 - Traefik](https://github.com/Jubagcastro/MetalLB-Traefik-CertManager/tree/master/2%20-%20traefik)
 # [3 - Cert-Manager](https://github.com/Jubagcastro/MetalLB-Traefik-CertManager/tree/master/3%20-%20certmanager)
-   ## 3.1 - Emita os certificados
 # 4 Make Coffee & Celebrate
